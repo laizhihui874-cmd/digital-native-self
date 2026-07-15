@@ -30,5 +30,8 @@ jobs:
       - name: Install dependencies
         run: corepack pnpm install --frozen-lockfile
 
+      - name: Prepare test environment
+        run: cp .env.example .env
+
       - name: Run reproducible checks
         run: corepack pnpm verify:ci
