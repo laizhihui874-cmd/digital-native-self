@@ -1,0 +1,39 @@
+{
+  "name": "@digital-self/mcp",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./stdio": {
+      "types": "./dist/stdio.d.ts",
+      "require": "./dist/stdio.js",
+      "default": "./dist/stdio.js"
+    }
+  },
+  "bin": {
+    "digital-self-mcp": "./dist/stdio.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "smoke": "node dist/smoke.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start:stdio": "node dist/stdio.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  }
+}

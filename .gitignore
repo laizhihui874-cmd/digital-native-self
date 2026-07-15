@@ -1,0 +1,46 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# environment
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+
+# build output
+.next/
+dist/
+build/
+coverage/
+.turbo/
+*.tsbuildinfo
+/output/
+/*.app/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+.claude/
+.playwright-cli/
+pnpm-lock 2.yaml
+
+# local storage
+storage/*
+!storage/.gitkeep
+
+# private project notes
+/00-*.md
+/01-*.md
+/02-*.md
+/03-*.md
+/04-*.md
+/agent.md
+/specs/
+
+# prisma
+packages/shared/prisma/dev.db
+packages/shared/prisma/dev.db-journal
